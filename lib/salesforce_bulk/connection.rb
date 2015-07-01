@@ -81,7 +81,7 @@ module SalesforceBulk
     end
 
     def parse_instance()
-      @server_url =~ /https:\/\/([a-z]{2,2}[0-9]{1,2})(-api)?/
+      @server_url =~ /https:\/\/([a-z]{2,2}[0-9]{1,2}|emea)(-api)?/
       if $~.nil?
         # Check for a "My Domain" subdomain
         @server_url =~ /https:\/\/[a-zA-Z\-0-9]*.([a-z]{2,2}[0-9]{1,2})(-api)?/
